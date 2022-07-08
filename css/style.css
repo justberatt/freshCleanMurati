@@ -11,6 +11,7 @@ body {
 
 header {
     padding-top: .5em;
+    text-align: center;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
@@ -28,63 +29,91 @@ header {
     align-items: center;
 }
 
-.nav-toggle {
-    cursor: pointer;
-    background: none;
-    border: none;
-    border-radius: 50%;
-    width: 2.5em;
-    height: 2.5em;
-
-    position: absolute;
-    right: 0;
-}
-
-.nav-toggle:focus,
-.nav-toggle:hover {
-    opacity: .75;
+.head-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .call__button {
-    margin-right: 70px;
+    position: absolute;
+    top: 30px;
+    right: 90px;
 }
 
-nav {
+.nav-toggle {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav {
     visibility: hidden;
+    height: 0;
+    position: absolute;
 }
 
 .nav--visible {
     visibility: visible;
     height: auto;
-    width: 100%;
-    transform: translateY(3.6em);
-    background: #105378;
     position: relative;
 }
 
 .nav__list {
-    list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    list-style: none;
+    margin: 1em 0;
 }
 
 .nav__item {
-    margin-top: .75em;
-}
-
-.nav__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    margin-top: .5em;
 }
 
 .nav__link {
-    color: #EDF2F4;
-    text-transform: uppercase;
+    color: #105378;
     text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.1rem;
 }
 
 .nav__link:hover,
 .nav__link:focus {
     opacity: .65;
+}
+
+@media (min-width: 800px) {
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav {
+        visibility: visible;
+        position: relative;
+        height: auto;
+    }
+
+    .nav__item {
+        margin: 0 0 0 1.5em;
+    }
+
+    .nav__list {
+        display: flex;
+    }
+
+    .head-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .call__button {
+        position: relative;
+        right: 0;
+        top: 0;
+    }
 }
