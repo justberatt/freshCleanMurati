@@ -15,14 +15,6 @@ header {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.container {
-    max-width: 1100px;
-    width: 80%;
-    margin: 0 auto;
-    /* I need position relative for the toggle button */
-    position: relative;
-}
-
 .head-wrapper {
     display: flex;
     flex-direction: column;
@@ -88,7 +80,9 @@ header {
     width: 100%;
 }
 
-.hero__text {
+.hero__text,
+.howItWorks__heading,
+.howItWorls__paragraph {
     padding: 0 1.8em;
     text-align: center;
 }
@@ -99,12 +93,173 @@ header {
     font-weight: 900;
 }
 
-.hero__text p {
+.howItWorks__heading {
+    font-size: 32px;
+    color: #105378;
+    font-weight: 900;
+}
+
+.hero__text p,
+.howItWorls__paragraph,
+.hIW__contactUs h3,
+.hIW__booking h3,
+.hIW__congrats h3 {
     font-size: 20px;
     color: #105378;
 }
 
+.hIW__contactUs p,
+.hIW__booking p,
+.hIW__congrats p,
+.aboutUs__text p {
+    font-size: 18px;
+    color: #105378;
+}
+
+.howItWorks {
+    background-color: #EDF3FC;
+    border-radius: 15px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 2em 0;
+    position: relative;
+}
+
+.hIW__booking,
+.hIW__contactUs,
+.hIW__congrats,
+.aboutUs__text {
+    background-color: #fff;
+    border-radius: 15px;
+    margin: 1em .8em .8em .8em;
+    text-align: center;
+    padding: 1.5em;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.hIW__contactUs {
+    margin-top: 2em;
+}
+
+.aboutUs {
+    background-color: #EDF3FC;
+    border-radius: 15px;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 9em;
+    padding: 0 0 1.5em 0;
+}
+
+.aboutUs h3 {
+    text-align: center;
+    color: #105378;
+    font-size: 24px;
+    padding: 1.5em;
+    margin: 0;
+}
+
+
+.aboutUs__text {
+    padding: 1.5em 1em 1em 1em;
+    margin-top: 0;
+}
+
+
+.aboutUs__text p {
+    margin: 0;
+}
+
+.learnMore {
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid #105378;
+    text-align: center;
+    width: 80%;
+    margin: 3em auto;
+    margin-bottom: 2em;
+}
+
+.learnMore p {
+    color: #105378;
+    font-size: 20px;
+}
+
+.roofLogo img {
+    width: 100%;
+}
+
+.hIW__congrats {
+    margin-bottom: -40%;
+}
+
+.hIW__contactUs h3,
+.hIW__contactUs p,
+.hIW__booking h3,
+.hIW__booking p,
+.hIW__congrats h3,
+.hIW__congrats p {
+    margin: 1em 0 0 0;
+}
+
+.arrowDown {
+    text-align: center;
+    margin-top: 1.2em;
+}
+
+footer {
+    background-color: #F9F9F9;
+    text-align: center;
+    margin-top: 4em;
+    padding-bottom: 2em;
+}
+
+.footerLinks {
+    padding: 2em 0;
+}
+
+hr {
+    padding: 0;
+    margin: 0;
+    opacity: 60%;
+}
+
+.footerList {
+    margin-bottom: 0;
+}
+
+.socialMediaLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 0 1.5em 0;
+}
+
+.socialMediaLinks__item {
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    position: relative;
+    margin: 0 1em;
+}
+
+.socialMediaLinks__item img {
+    width: 70%;
+    height: 60%;
+    position: absolute;
+    left: 15%;
+    top: 19%;
+}
+
 @media (min-width: 800px) {
+
+    .container {
+        max-width: 1100px;
+        width: 80%;
+        margin: 0 auto;
+        /* I need position relative for the toggle button */
+        position: relative;
+    }
 
     .row {
         display: flex;
