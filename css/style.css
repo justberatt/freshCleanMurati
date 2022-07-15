@@ -25,13 +25,18 @@ header {
 .call__button {
     position: absolute;
     top: 30px;
-    right: 90px;
+    right: 70px;
+}
+
+.call__button:hover,
+.call__button:focus {
+    opacity: 60%;
 }
 
 .nav-toggle {
     position: absolute;
     top: 30px;
-    right: 30px;
+    right: 10px;
     background: none;
     border: none;
     cursor: pointer;
@@ -50,10 +55,9 @@ header {
 }
 
 .nav__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
     margin: 1em 0;
+    padding: 0 0 1em 0;
+    list-style: none;
 }
 
 .nav__item {
@@ -251,7 +255,7 @@ hr {
     top: 19%;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 700px) {
 
     .container {
         max-width: 1100px;
@@ -264,7 +268,18 @@ hr {
     .row {
         display: flex;
         justify-content: space-between;
+        flex-direction: row;
         align-items: center;
+    }
+
+    /* .head-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    } */
+
+    header {
+        padding-top: 0;
     }
 
     .nav-toggle {
@@ -283,17 +298,91 @@ hr {
 
     .nav__list {
         display: flex;
-    }
-
-    .head-wrapper {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        padding: 0;
     }
 
     .call__button {
         position: relative;
         right: 0;
         top: 0;
+    }
+
+    .hero {
+        padding: 2em 0 4em 0;
+    }
+
+    .hero__text {
+        text-align: left;
+        padding: 0;
+    }
+
+    .hero__text {
+        width: 70%;
+    }
+
+    .hero img {
+        width: 60%;
+    }
+
+    .hIW__congrats {
+        margin-bottom: -25%;
+    }
+
+    .aboutUs {
+        margin-top: 9em;
+    }
+}
+
+@media (min-width: 900px) {
+    .container {
+        max-width: 1100px;
+        width: 90%;
+        margin: 0 auto;
+        /* I need position relative for the toggle button */
+        position: relative;
+    }
+
+    .wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hero__text h1,
+    .hero__text p {
+        margin: 0;
+    }
+
+    .hero__text {
+        width: 40%;
+        margin-right: 1em;
+    }
+
+    .hero__text h1 {
+        padding: 0 1em 1em 0;
+    }
+
+    .hero__text p {
+        padding-right: 1em;
+    }
+
+    .hIW__contactUs,
+    .hIW__booking,
+    .hIW__congrats {
+        margin: 0;
+        padding: 0;
+        width: 40%;
+    }
+
+    .arrowDown {
+        height: 100%;
+        transform: translateY(70px);
+    }
+
+    .arrowDown img {
+        transform: rotateZ(-90deg);
+    }
+
+    .aboutUs {
+        margin-top: 3em;
     }
 }
