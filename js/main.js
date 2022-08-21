@@ -6,3 +6,12 @@ navToggle.addEventListener('click', () => {
     nav.classList.toggle('nav--visible');
 });
 
+ScrollReveal({
+    reset: true,
+    distance: '60px',
+    duration: 2500,
+    delay: 400
+});
+
+ScrollReveal(). reveal('.hero__text, .howItWorks__heading, .aboutUs__heading', { delay: 500, origin: 'left'});
+ScrollReveal().reveal('.call__button', { scale: 2 });

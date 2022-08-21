@@ -11,18 +11,20 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
 
+    <script src="https://unpkg.com/scrollreveal"></script>
+
     <title>Fresh Clean Murati</title>
 </head>
 
 <body>
     <header>
         <div class="row container">
-            <a class="logo" href="#"><img src="../imgs/Logo.jpg" alt="Logo"></a>
+            <a class="logo" href="home.html"><img src="../imgs/Logo.jpg" alt="Logo"></a>
             <nav class="nav">
                 <ul class="nav__list">
-                    <li class="nav__item"><a class="nav__link" href="#">About Us</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">Services</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">Contact</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#aboutUs">Über uns</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#ourServices">Unsere Leistungen</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#contactUs">Kontaktiere uns</a></li>
                 </ul>
             </nav>
             <div class="call__button"><a href="tel:+4367763483310"><img src="../imgs/Call Button.svg"
@@ -72,7 +74,7 @@
             </div>
             <div class="hIW__congrats">
                 <img src="../imgs/house-svgrepo-com 1.svg" alt="house plan">
-                <h3>Herzlichen Glückwunsch, es ist geschafft.</h3>
+                <h3>Herzlichen Glückwunsch</h3>
                 <p><b>Haus</b> ist sauber. Zeit nach Hause zu kommen.
                     <b>Büro</b> ist sauber. Zeit, wieder an die Arbeit zu kommen
                 </p>
@@ -80,28 +82,104 @@
         </div>
     </section>
 
-    <section class="aboutUs container">
-        <h3>Aboout Us</h3>
-        <div class="aboutUs__text">
-            <p>Wir sind ein Familienunternehmen. Meine Frau und ich sind zusammen mit meinem Bruder die ersten
-                „Mitarbeiter“ der Firma. Wir sehen unser Geschäft als Teil unserer Familie und kümmern uns daher mit
-                großer Sorgfalt darum. Und die gleiche Liebe und Fürsorge, die wir unseren Kunden entgegenbringen, von
-                unserer Familie bis zu Ihrer.</p>
+    <section class="aboutUs container" id="aboutUs">
+        <div class="aboutUs__hero">
+            <h3 class="aboutUs__heading">Über uns</h3>
+            <div class="aboutUs__text">
+                <p>Wir sind ein Familienunternehmen. Meine Frau und ich sind zusammen mit meinem Bruder die ersten
+                    „Mitarbeiter“ der Firma. Wir sehen unser Geschäft als Teil unserer Familie und kümmern uns daher mit
+                    großer Sorgfalt darum. Und die gleiche Liebe und Fürsorge, die wir unseren Kunden entgegenbringen,
+                    von
+                    unserer Familie bis zu Ihrer.</p>
+            </div>
+            <div class="learnMore">
+                <a href="#ourServices" class="learnMore__link">
+                    <p>Erfahren Sie mehr über unsere Dienstleistungen</p>
+                </a>
+            </div>
+            <div class="roofLogo">
+                <img src="../imgs/RoofLogo.svg" alt="Roof Logo">
+            </div>
         </div>
-        <div class="learnMore">
-            <p>Learn more about our services</p>
-        </div>
-        <div class="roofLogo">
-            <img src="../imgs/RoofLogo.svg" alt="Roof Logo">
+        <div class="aboutUs__img">
+            <img src="../imgs/pexels-emma-bauso-3585812 (1).jpg" alt="A man cleaning a window">
         </div>
     </section>
+
+    <section class="ourServices container row" id="ourServices">
+        <div class="ourServices__hero">
+            <div class="ourServices__text">
+                <h2>Unsere Leistungen</h2>
+                <p>Manchmal hat man einfach viel zu tun und fühlt sich überfordert. Hier kommen wir ins Spiel. Unser
+                    Team
+                    steht Ihnen für alle Reinigungsanforderungen zur Verfügung. Nachfolgend finden Sie die Arten aller
+                    von
+                    uns angebotenen Dienstleistungen. Alles, was Sie tun müssen, ist uns entweder über die
+                    Anrufschaltfläche
+                    (oben rechts)
+                    oder über die Kontaktformular zu kontaktieren (unten), wo Sie auch eine Nachricht
+                    hinterlassen können.</p>
+            </div>
+            <div class="ourServices__img"><img src="../imgs/housekeeper-moping-doing-chores.svg"
+                    alt="Man sweeping the floor">
+            </div>
+        </div>
+
+        <div class="services">
+            <ul class="servicesList">
+                <li class="service">Baureinigungen</li>
+                <li class="service">Bettwäsche</li>
+                <li class="service">Büroreinigungen</li>
+                <li class="service">Fassadenreinigungen</li>
+                <li class="service">Grünanlagenpflege</li>
+                <li class="service">Heckenschneiden</li>
+                <li class="service">Lederreinigungen</li>
+                <li class="service">Lüftungsanlagen</li>
+                <li class="service">Pelzreinigungen</li>
+                <li class="service">Plural</li>
+                <li class="service">Puzereien</li>
+                <li class="service">Putzfirma</li>
+                <li class="service">Rasenpflege</li>
+                <li class="service">Sonderreinigung</li>
+                <li class="service">Sonderreinigungen</li>
+                <li class="service">Textilreinigung</li>
+                <li class="service">Übersiedlungen</li>
+                <li class="service">Winterdienste</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="contactUs" id="contactUs">
+        <form action="https://formsubmit.co/e20f31f3d2a4cfaee2ffd5589aa1136e" method="POST">
+
+            <fieldset>
+
+                <legend><span class="number"></span> Ihre grundlegenden Informationen</legend>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name" required>
+
+                <label for="mail">Ihre Emailadresse:</label>
+                <input type="email" id="mail" name="user_email" required>
+
+                <label for="message">Ihre Nachricht:</label>
+                <textarea id="message" name="message" placeholder="Ihre Nachricht gehört hierher" required></textarea>
+
+                <input type="hidden" name="_template" value="box">
+            </fieldset>
+
+            <button type="submit">Send</button>
+        </form>
+
+    </section>
+
     <footer>
         <div class="footerLinks container">
-            <a class="logo" href="#"><img src="../imgs/Logo.jpg" alt="Logo"></a>
+            <a class="logo" href="home.html"><img src="../imgs/Logo.jpg" alt="Logo"></a>
             <ul class="nav__list footerList">
-                <li class="nav__item"><a class="nav__link" href="#">Über uns About Us</a></li>
-                <li class="nav__item"><a class="nav__link" href="#">Dienstleistungen Services</a></li>
-                <li class="nav__item"><a class="nav__link" href="#">Kontaktiere uns Contact</a></li>
+                <li class="nav__item"><a class="nav__link" href="#aboutUs">Über uns</a></li>
+                <li class="nav__item"><a class="nav__link" href="#ourServices">Unsere Leistungen</a></li>
+                <li class="nav__item"><a class="nav__link" href="#contactUs">Kontaktiere uns</a></li>
             </ul>
         </div>
         <hr>

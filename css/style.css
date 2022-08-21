@@ -12,8 +12,9 @@ body {
 header {
     padding-top: .5em;
     text-align: center;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 30px 0px;
 }
+
 
 .head-wrapper {
     display: flex;
@@ -165,7 +166,6 @@ header {
 
 .aboutUs__text {
     padding: 1.5em 1em 1em 1em;
-    margin-top: 0;
 }
 
 
@@ -183,9 +183,23 @@ header {
     margin-bottom: 2em;
 }
 
+.learnMore:hover {
+    background-color: #105378;
+    transition: 0.7s;
+}
+
+.learnMore p:hover {
+    color: #fff;
+    transition: 0.7s;
+}
+
 .learnMore p {
     color: #105378;
     font-size: 20px;
+}
+
+.learnMore__link {
+    text-decoration: none;
 }
 
 .roofLogo img {
@@ -255,6 +269,131 @@ hr {
     top: 19%;
 }
 
+form {
+    max-width: 500px;
+    margin: 3em auto;
+    padding: 1.5em 1em;
+    background: #f4f7f8;
+    border-radius: 8px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 15px;
+    width: 100%;
+    background-color: #e8eeef;
+    color: #8a97a0;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    margin-bottom: 30px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin: 0 4px 8px 0;
+}
+
+button[type="submit"] {
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    background-color: #4bc970;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #3ac162;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    margin-bottom: 10px;
+}
+
+fieldset {
+    margin-bottom: 30px;
+    border: none;
+}
+
+legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+label.light {
+    font-weight: 300;
+    display: inline;
+}
+
+
+.ourServices {
+    background-color: #EDF3FC;
+    color: #105378;
+    border-radius: 15px;
+    width: 95%;
+    margin: 3em auto;
+    padding: 2em 1em;
+    position: relative;
+    text-align: center;
+}
+
+.service {
+    background: white;
+    border-radius: 10px;
+    list-style: none;
+    width: 49%;
+    height: 70px;
+    font-size: 1.2rem;
+}
+
+.servicesList {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    row-gap: 20px;
+}
+
+.service {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutUs {
+    padding-top: 1em;
+}
+
+.aboutUs__img {
+    visibility: hidden;
+    position: absolute;
+    padding: 1em;
+}
+
+.aboutUs__img img {
+    width: 100%;
+}
+
 @media (min-width: 700px) {
 
     .container {
@@ -298,6 +437,7 @@ hr {
 
     .nav__list {
         display: flex;
+        justify-content: center;
         padding: 0;
     }
 
@@ -331,12 +471,20 @@ hr {
     .aboutUs {
         margin-top: 9em;
     }
+
+    .ourServices {
+        margin-top: 3.5em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ourServices__img {}
 }
 
 @media (min-width: 900px) {
     .container {
         max-width: 1100px;
-        width: 90%;
+        width: 80%;
         margin: 0 auto;
         /* I need position relative for the toggle button */
         position: relative;
@@ -369,13 +517,13 @@ hr {
     .hIW__booking,
     .hIW__congrats {
         margin: 0;
-        padding: 0;
-        width: 40%;
+        padding: 1em .5em;
+        width: 30%;
     }
 
     .arrowDown {
         height: 100%;
-        transform: translateY(70px);
+        transform: translateY(85px);
     }
 
     .arrowDown img {
@@ -383,6 +531,52 @@ hr {
     }
 
     .aboutUs {
+        display: flex;
         margin-top: 3em;
+        padding: 1em 0 1.5em 1em;
+    }
+
+
+    .aboutUs__hero {
+        position: relative;
+        width: 50%;
+        background-color: #fff;
+        border-radius: 20px;
+    }
+
+    .aboutUs__img {
+        visibility: visible;
+        position: relative;
+    }
+
+    .roofLogo {
+        position: absolute;
+        bottom: 1em;
+        width: 100%;
+    }
+
+    .learnMore {
+        margin: 5em auto;
+    }
+
+    .ourServices__text {
+        width: 50%;
+    }
+
+    .ourServices__img {
+        width: 60%;
+    }
+
+    .ourServices {
+        margin-top: 3.5em;
+    }
+
+    .ourServices__hero {
+        display: flex;
+        margin-bottom: 2.5em;
+    }
+
+    .service {
+        width: 32%;
     }
 }
