@@ -13,5 +13,4 @@ ScrollReveal({
     delay: 400
 });
 
-ScrollReveal(). reveal('.hero__text, .howItWorks__heading, .aboutUs__heading', { delay: 500, origin: 'left'});
 ScrollReveal().reveal('.call__button', { scale: 2 });
